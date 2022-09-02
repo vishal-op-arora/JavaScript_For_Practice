@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 18px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatibus deserunt vel cumque velit. Aliquam repellendus nostrum provident natus distinctio, nesciunt accusantium omnis aut suscipit vero at incidunt sint dicta?
+        
+        <br>
+        <button onclick="changeColor()">Change Color</button>
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+        <button onclick="increaseFontSize()">+ Font Size</button>
+        <button onclick="decreaseFontSize()">- Font Size</button>
+    </p>
+
+    <script>
+
+        function changeColor(){
+            document.getElementsByTagName('p')[0].style.color = "red";
+            console.log(document.getElementsByTagName('p')[0].style.fontSize);
+        }
+
+        function changeBackgroundColor(){
+            document.querySelector('p').style.backgroundColor = "yellow";
+        }
+
+        function increaseFontSize(){
+            document.getElementsByTagName('p')[0].style.fontSize = "20px";
+            
+        }
+
+        function decreaseFontSize(){
+            document.getElementsByTagName('p')[0].style.fontSize = "16px";
+        }
+    </script>
+</body>
+</html>
