@@ -36,4 +36,6 @@ catch(error){
 
 try{
     console.log(add(12, 12));
+} finally{
+    
 }
