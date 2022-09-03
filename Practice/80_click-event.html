@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias incidunt numquam alias hic earum, ea, perspiciatis officia itaque animi cumque, autem vitae quia atque ipsam nobis culpa dignissimos libero maxime! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium similique quo soluta dolorem nobis exercitationem ducimus maiores aperiam magnam repudiandae accusantium, dolore fugiat commodi minima deserunt eveniet illo. Rerum, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati pariatur, aliquam illo sint voluptates accusantium numquam officiis. Possimus tenetur provident voluptatem ut praesentium earum iure, eligendi tempora? Exercitationem, molestias magni.
+    </div>
+    <button onclick="handleClick();"> Click me</button>
+    <br>
+    <button> Click me again</button>
+
+    <script>
+        function handleClick(){
+            alert("I was clicked");
+        };
+
+        document.querySelectorAll('button')[1].onclick = handleClick;
+    </script>
+</body>
+</html>

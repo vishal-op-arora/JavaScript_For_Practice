@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>Click me</button>
+    <br>
+    <hr>
+    <a href="http://www.google.com">Google Search page</a>
+    <script>
+
+        /**
+         * The context of the eventHandler added to a element using addEventListener method will always be-
+         * The DOM node on which addEventListener is attached.
+         */ 
+        document.querySelector('button').addEventListener('click', function(event){
+            console.log("Target : ", event.target);
+            console.log("Type :", event.type);
+            console.log(event);
+        });
+
+        /**
+         * Event default method
+         * event.preventDefault() will restrict anchor tag to redirect user to a href url after the user clicks on it.
+         */ 
+
+         document.querySelector('a').addEventListener('click', function(event){
+            if(!confirm("Are you sure you want to leave my beautiful website")){
+                event.preventDefault();
+            }
+         });
+    </script>
+</body>
+</html>
