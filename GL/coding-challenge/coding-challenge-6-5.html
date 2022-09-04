@@ -1,0 +1,69 @@
+<!-- 
+    Description
+    Create a html page having a button element with id as ‘btn’ inside the  body of the page.
+
+    Disable the context menu that appears when we right click on the above button tag.
+    Create a paragraph tag on the html page with id ‘message’
+    The p tag with id ‘message ‘ will be updated with the  mouse button name which we clicked on the above button tag.
+    Use onmousedown property of button object in js.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding-challenge-6-5</title>
+</head>
+<body>
+    
+    <button id="btn">Click me with any mouse button: left, right, middle,...</button>
+    
+    <p id="message"></p>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, assumenda fugiat voluptas quis impedit, sit repellat dolores explicabo porro molestiae neque nemo rem eaque hic ipsum voluptatibus ut nobis doloremque!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dignissimos omnis nisi quasi sit ipsam! Quas repellat incidunt nam, mollitia quibusdam laudantium iure numquam alias soluta minima impedit hic molestias.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere fuga temporibus accusantium laudantium eligendi sit eum libero nihil tenetur. Voluptate nemo officia dolorum sit recusandae excepturi magni dolores libero quibusdam!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum cupiditate odit dolorem harum consectetur ipsum corporis laudantium, odio quos debitis sit deserunt mollitia suscipit velit officiis, optio fugiat ipsam vitae!
+    </div>
+    
+    <script>
+        let btn = document.querySelector("#btn");
+        let msg = document.querySelector('#message');
+
+        btn.addEventListener('contextmenu', function(event){
+            event.preventDefault();
+        });
+
+        // show the mouse event message
+        btn.onmousedown = function(event){
+            switch (event.button) 
+            {
+                case 0:
+                    msg.textContent = 'Left mouse button clicked.';
+                    break;
+                
+                case 1:
+                    msg.textContent = 'Middle mouse button clicked.';
+                    break;
+                    
+                case 2:
+                    msg.textContent = 'Right mouse button clicked.';
+                    break;
+                    
+                default:
+                    msg.textContent = `Unknown mouse button code:${event.button}`;
+            }
+        }
+
+        let divEl = document.getElementsByTagName('div');
+        console.log(divEl);
+        divEl.onmousedown = function(event){
+            console.log(event);
+        }
+                
+    </script>
+</body>
+</html>

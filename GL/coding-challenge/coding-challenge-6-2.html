@@ -1,0 +1,51 @@
+<!-- 
+    Description
+        Create a html page having some paragraph tag and some h2,h3 tags with some text inside them along with a div tag having id as ‘div’.
+        All h2,h3 have same  value of  className attribute i.e, “header”
+        All paragraphs tag have className attribute as “paragraph”.
+        Now print the content of all paragraph tag in the browser console.
+        And add a new h1 inside the div tag in html using js code.
+        And also change the text of all header tags  to “HEADINGS” and paragraph tags to “PARAGRAPH”.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding-challenge-6-2</title>
+</head>
+<body>
+    <p class="paragraph">Para-1</p>
+    <p class="paragraph">Para-2</p>
+
+    <h2 class="header">Heading h2</h2>
+    <h3 class="header">Heading h3</h3>
+
+    <div id="div">
+        div element
+    </div>
+
+    <script>
+        console.log("Now print the content of all paragraph tag in the browser console");
+        const pEls = document.getElementsByClassName("paragraph");
+        const hEls = document.getElementsByClassName("header");
+        const divEl = document.getElementById("div")
+
+        for(let i = 0; i < pEls.length; i++){
+            console.log(pEls[i].innerText );
+            pEls[i].innerText = "PARAGRAPH - " + ( i+1 );
+        }
+
+        console.log(divEl.innerText);
+        divEl.innerHTML = `<h1 class="header">Heading h1</h1>`;
+
+        for(let i = 0; i < hEls.length; i++){
+            console.log(hEls[i].innerText);
+            hEls[i].innerText = hEls[i].innerText.replace("Heading", "HEADINGS");
+        }
+        
+    </script>
+</body>
+</html>

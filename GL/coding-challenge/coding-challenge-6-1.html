@@ -1,0 +1,34 @@
+
+<!-- 
+    Description
+Create a Html page having two paragraph tag and one H2 tag.Place some dummy data in all the tags.
+
+Now using the reference to these elements in html via JS code print the H2 tag and the count of paragraph tag present in html code on browser console using getElementByID and getElementsByClassName methods respectively.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding-challenge-6-1</title>
+</head>
+<body>
+    <p class="para"> Para-1</p>
+    <p class="para"> Para-2</p>
+    <h2 id="header">Header tag h2</h2>
+
+    <script>
+        const h2Tags = document.getElementsByTagName("h2");
+        for(var i = 0; i < h2Tags.length ; i++){
+            console.log(`h2 tag element ${i+1} :`, h2Tags[i]);
+        }
+
+        const h2El = document.getElementById("header");
+        console.log("header Element : ", h2El);
+
+        const paraClassElements = document.getElementsByClassName("para");
+        console.log("p elements count : ", paraClassElements.length);
+    </script>
+</body>
+</html>

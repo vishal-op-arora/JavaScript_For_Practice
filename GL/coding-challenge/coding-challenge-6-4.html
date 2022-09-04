@@ -1,0 +1,38 @@
+<!-- 
+    Description
+    Create a html page having a button element with id as ‘btn’ inside the  body of the page.
+    Now when a user accesses the html page in the browser, the page before loading the button to the web page should display an alert stating “the page contains a button”.
+
+    Now Whenever user clicks on the button it should print “Button Clicked on the browser console”
+    User onclick attribute of button tag and querySelector with proper input parameter to access button tag inside JS Code..
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding-challenge-6-4</title>
+</head>
+<body>
+    
+    <button id="btn">Button</button>
+    
+    <script>
+        window.onabort = alert("this page contains a button.");
+
+        var btnEl = document.querySelector("#btn");
+
+        btnEl.onclick = function(){
+            console.log("onclick = Button Clicked on the browser console");
+        }
+
+        btnEl.addEventListener('click', function(){
+            console.log("eventListener : Button Clicked on the browser console");
+        });
+
+                
+    </script>
+</body>
+</html>

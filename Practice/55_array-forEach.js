@@ -11,3 +11,7 @@ var days = [
 days.forEach(function(item){
     console.log(item, "----------> ", item.day, item.hours);
 });
+
+days.forEach(element => {
+    console.log(element);
+});

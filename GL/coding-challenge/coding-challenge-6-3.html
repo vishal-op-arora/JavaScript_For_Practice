@@ -1,0 +1,35 @@
+<!-- 
+    Description
+    Initially you have a empty html page having nothing inside its body-
+
+    Using JS add a h1 tag having id as ‘header’ in the html with some dummy data inside it  using document.documentElement.innerHTML object .
+    Now change the color of text to yellow of the above inserted h1 tag using js code.
+    Also change the fontSize of the header text to 78px.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding-challenge-6-3</title>
+</head>
+<body>
+    
+    
+    <script>
+
+
+        const bodyEl = document.getElementsByTagName("body")[0];
+
+        bodyEl.innerHTML = `<h1 id="header"> Header h1</h1>`;
+
+        const hEl = document.getElementById('header');
+        hEl.style.color = "yellow";
+        hEl.style.fontSize = "78px";
+
+                
+    </script>
+</body>
+</html>
